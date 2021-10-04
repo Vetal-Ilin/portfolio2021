@@ -1,0 +1,84 @@
+.about-me {
+    width: 100%;
+    min-width: 320px;
+    background-color: @palette-tertiary;
+
+    & > h2 {
+        .titile-section();
+    }
+
+    &__list {
+        background-color: @palette-tertiary;
+
+        &__item {
+            color: @palette-primary;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid @palette-secondary-quaternary;
+            padding: 15px 0;
+            text-transform: uppercase;
+    
+            & > a { 
+                color: @palette-primary;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: color @animation-speed;
+
+                & > img {
+                    .icon-size();
+                    margin-left: 5px;
+                    transition: transform  @animation-speed;
+                }
+            }
+
+            &:first-child {
+                padding-top: 0;
+            }
+    
+            &:last-child {
+                border-bottom: none;
+            }
+        } 
+    } 
+
+    @media screen and (min-width: 576px) {
+
+        & > h2 {
+            padding-left: 0;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        overflow: hidden;
+
+        & > .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        &__list {
+            width: 70%;
+            border-radius: @br-elements;
+            padding: 50px;
+            .box-shadow-elements();
+        }
+    }
+
+    @media screen and (hover: hover) {
+        &__list {
+            &__item {
+                & > a:hover { 
+                    color: @palette-secondary;
+
+                    & > img {
+                        transform: rotate(360deg);
+                    }
+                }
+            } 
+        } 
+    }
+}

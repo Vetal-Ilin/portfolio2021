@@ -1,0 +1,166 @@
+.work {
+    width: 100%;
+    min-width: 320px;
+    height: auto; 
+    background-color: @palette-tertiary;
+    position: relative;
+    
+    &__wrapper { 
+
+        & > span {
+            display: none
+        }
+
+        &__card {
+          
+            & > h2 {
+                .titile-section();
+            }
+
+            & > p {
+                color: @palette-primary;
+            }
+            
+            &__profession {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                width: 100%;
+
+                & > p {
+                    color: @palette-primary;
+                    text-align: left;
+                    text-transform: uppercase;
+                    margin-top: 15px;
+                    position: relative;
+                    padding-left: 10px;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        background-color: @palette-primary;
+                        border-radius: 50%;
+                        width: 5px;
+                        height: 5px;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+
+        &__video {
+            display: none;  
+            .box-shadow-elements(); 
+        }
+    }
+
+    @media screen and (min-width: 576px) {
+        
+
+        &__wrapper {
+
+            position: relative;
+            height: 600px;
+
+            & > span {
+                display: block;
+                position:absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1000; 
+            }
+
+            &__card {
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+                height: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                padding: 50px;
+                z-index: 1000;
+                background-color: @palette-secondary-transparent;
+                border-radius: @br-elements;
+          
+                & > h2 {
+                    text-align: center;
+                    color: @palette-tertiary;
+                }
+    
+                & > p {
+                    text-align: center;
+                    color: @palette-tertiary;
+                }
+                
+                &__profession {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 15px;
+                    width: inherit;
+    
+                    & > p {
+                        text-align: center;
+                        color: @palette-tertiary;
+
+                        &::before {
+                            background-color: @palette-tertiary;
+                        }
+                    }
+                }
+            }
+
+            &__video {
+                display: block;
+                min-width: 100%;
+                min-height: 100%;
+                position: relative;
+                overflow: hidden;
+                border-radius: @br-elements;
+            
+                & > video {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    min-width: 100%; 
+                    min-height: 100%;
+                }
+            }
+        }   
+    }
+
+    @media screen and (min-width: 576px) {
+        &__wrapper {
+
+            &__card {
+                width: 80%;
+          
+                & > p {
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        &__wrapper {
+            
+            &__card {
+                width: 70%;
+          
+                & > p {
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

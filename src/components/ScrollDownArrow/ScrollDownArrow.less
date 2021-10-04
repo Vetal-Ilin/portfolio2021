@@ -1,0 +1,48 @@
+.scroll-down-arrow {
+    .shell-icon();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .3s;
+    
+    & > p {
+        display: none;
+    }
+
+    & > img {
+        animation-duration: 1s;
+        animation-name: IconScrollAnimation;
+        animation-iteration-count: infinite;
+        color: @palette-secondary;
+        .icon-size();
+    }
+
+    @media screen and(min-width: 992px) {
+        background-color: transparent;
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    @media screen and(hover:hover) {
+        &:hover {
+            cursor: pointer;
+            transform: rotate(360deg);
+        }
+    }
+}
+
+
+@keyframes IconScrollAnimation {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

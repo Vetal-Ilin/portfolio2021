@@ -1,0 +1,54 @@
+.icon-size() {
+    width: 19px;
+    height: 19px;
+}
+
+.shell-icon() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.box-shadow-elements() {
+    box-shadow: @bs-elements-mobile;
+
+    @media screen and (min-width: 992px) {
+        box-shadow: @bs-elements-desktop;
+    }
+}
+
+
+.padding-top-section() {
+    padding: 50px 0;
+
+    @media screen and (min-width: 576px) {
+        padding: 60px 0;
+    }
+    @media screen and (min-width: 768px) {
+        padding: 70px 0;
+    }
+    @media screen and (min-width: 992px) {
+        padding: 80px 0;
+    }
+    @media screen and (min-width: 1200px) {
+        padding: 90px 0;
+    }
+}
+
+.titile-section() {
+    color: @palette-primary;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    text-align: center;
+    @media screen and (min-width: 576px) {
+        margin-bottom: 30px;
+    }
+    @media screen and (min-width: 768px) {
+        margin-bottom: 35px;
+    }
+    @media screen and (min-width: 992px) {
+        margin-bottom: 40px;
+    }
+}
